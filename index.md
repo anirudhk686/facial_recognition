@@ -2,46 +2,40 @@
 layout: default
 ---
 # [](#header-2)About
+
 In this project i have built a facial recognition system using convolutional neural network. This project was a part of my internship at [NCAOR,India](http://www.ncaor.gov.in/).I have used the VGG-16 Net architecture and this has been implemented using keras library in python.
 
 In this page i have described the implementation details and references used.
+If you want to just know how to use this project and not the details, please refer to project's [readme](https://github.com/anirudhk686/facial_recognition/blob/master/README.md) 
+
+### [](#header-2)Project overview
+
+facial recognition problem is approached using the following steps:
+1. Detect faces in an image - image may contain background which is not needed for face recognition. hence we need to crop out face.
+for this i have used opencv's frontalface haarcascade. 
+2. Calculate unknown face encoding - this is the heart of the project. details are disscussed in next section.
+3. Comparing the face encodings - compare the unknown face encoding with all the known encodings and return the name of the most similar face encoding.
+
+#### [](#header-2)Encoding Faces
+
+What we need is a way to extract a few basic measurements from each face. Then we could measure our unknown face the same way and find the known face with the closest measurements. For example, we might measure the size of each ear, the spacing between the eyes, the length of the nose, etc. But we do not know which of the measurements exactly encode a face. Hence we use Convulutional Neural Networks which can automatically learn the encoding from the given image.
+
+For this i have followed the approach as suggested in this paper:
+
+>Deep face recognition, O. M. Parkhi and A. Vedaldi and A. Zisserman, Proceedings of the British Machine Vision Conference (BMVC), 2015 >[paper](http://www.robots.ox.ac.uk/~vgg/publications/2015/Parkhi15/parkhi15.pdf).
+
+Here is the brief discussion of the method proposed in the above paper.
 
 
 
 
 
-> This is a blockquote following a header.
->
-> When something is important enough, you do it even if the odds are not in your favor.
-
-### [](#header-3)Header 3
-
-```js
-// Javascript code with syntax highlighting.
-var fun = function lang(l) {
-  dateformat.i18n = require('./lang/' + l)
-  return true;
-}
-```
-
-```ruby
-# Ruby code with syntax highlighting
-GitHubPages::Dependencies.gems.each do |gem, version|
-  s.add_dependency(gem, "= #{version}")
-end
-```
-
-#### [](#header-4)Header 4
 
 *   This is an unordered list following a header.
 *   This is an unordered list following a header.
 *   This is an unordered list following a header.
 
-##### [](#header-5)Header 5
 
-1.  This is an ordered list following a header.
-2.  This is an ordered list following a header.
-3.  This is an ordered list following a header.
 
 ###### [](#header-6)Header 6
 
