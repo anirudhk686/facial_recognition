@@ -1,20 +1,14 @@
 ---
 layout: default
 ---
+# [](#header-2)About
+In this project i have built a facial recognition system using convolutional neural network. This project was a part of my internship at [NCAOR,India](http://www.ncaor.gov.in/).I have used the VGG-16 Net architecture and this has been implemented using keras library in python.
 
-can be **bold**, _italic_, or ~~strikethrough~~.
+In this page i have described the implementation details and references used.
 
-[Link to another page](another-page).
 
-There should be whitespace between paragraphs.
 
-There should be whitespace between paragraphs. We recommend including a README, or a file with information about your project.
 
-# [](#header-1)Header 1
-
-This is a normal paragraph following a header. GitHub is a code hosting platform for version control and collaboration. It lets you and others work together on projects from anywhere.
-
-## [](#header-2)Header 2
 
 > This is a blockquote following a header.
 >
