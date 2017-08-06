@@ -22,7 +22,7 @@ What we need is a way to extract a few basic measurements from each face. Then w
 
 For this i have followed the approach as suggested in this paper:
 
->Deep face recognition, O. M. Parkhi and A. Vedaldi and A. Zisserman, Proceedings of the British Machine Vision Conference (BMVC), 2015 >[paper](http://www.robots.ox.ac.uk/~vgg/publications/2015/Parkhi15/parkhi15.pdf).
+>Deep face recognition, O. M. Parkhi and A. Vedaldi and A. Zisserman, Proceedings of the British Machine Vision Conference (BMVC), 2015 [paper](http://www.robots.ox.ac.uk/~vgg/publications/2015/Parkhi15/parkhi15.pdf).
 
 Here is the brief discussion of the method proposed in the above paper.
 
