@@ -50,7 +50,7 @@ The convnet architecture used here is VGG-16 as shown below:<br>
 ## [](#header-2)Usage
 Information on code usage and requirements is avaliable in project [readme](https://github.com/anirudhk686/facial_recognition/blob/master/README.md).
 
-#### [](#header-2)References
+## [](#header-2)References
 Apart from the paper mentioned above i have used the following resources:
 * Facenet: A unified embedding for face recognition and clustering,F Schroff, D Kalenichenko, J Philbin - Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition,2015.[paper](https://arxiv.org/abs/1503.03832)
 * stanford course on convnets.[link](http://cs231n.stanford.edu/)
