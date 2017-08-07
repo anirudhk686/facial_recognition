@@ -28,9 +28,11 @@ Here is the brief discussion of the method proposed in the above paper.
 The basic objective is to obtain a network which outputs similar feature vectors for faces of the same person.Based on this objective function the authors have proposed to train the Convolutional network with the help of training set that contains three face images at a time. However two of the three images is of the same person where as third image is of a different person. In order to trian the network to give samilar encoding for the first two images and a differnt one for the third image, they have proposed a triplet loss function. This loss function aims to minimize distance between first two images and maximize distance from the third image.
 
 ## [](#header-2)VGG-16 Net
-The convnet architecture used here is VGG-16 as shown below:
-.      <img src="https://raw.githubusercontent.com/anirudhk686/facial_recognition/master/images/vgg16.png" width="300" height="600"><br>
-.     [image source](http://book.paddlepaddle.org/03.image_classification/)
+The convnet architecture used here is VGG-16 as shown below:<br>
+<img src="https://raw.githubusercontent.com/anirudhk686/facial_recognition/master/images/vgg16.png" width="300" height="600"><br>
+<center>[image source](http://book.paddlepaddle.org/03.image_classification/)</center>
+
+
 
 
 
