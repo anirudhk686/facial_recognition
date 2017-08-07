@@ -34,7 +34,7 @@ The convnet architecture used here is VGG-16 as shown below:<br>
 [image source](http://book.paddlepaddle.org/03.image_classification/)
 
 ### [](#header-2)Implementation
-Keras library with TensorFlow backend has been used to implement the above network.however due device contraints i could to train the network. Hence i used the trained weights after some modifications. the weight were downloaded from [here](http://www.vlfeat.org/matconvnet/pretrained/#face-recognition).They had also used the same procedure as described above. 
+Keras library with TensorFlow backend has been used to implement the above network.however due device contraints i could to train the network. Hence i used the trained weights after some modifications. the weight were downloaded from [here](http://www.vlfeat.org/matconvnet/pretrained/#face-recognition).They had also used the same procedure as described above. <br>
 But the downloaded weights were trained to identify 2622 pre-defined specific faces and hence i had to generalise it. For this i removed the last softmax layer and now the network would give out 2622 dimension feature vector for each face. since the network was trained using the triplet loss function it would output similar feature vector for faces of same person. 
 
 
