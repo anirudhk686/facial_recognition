@@ -27,99 +27,32 @@ For this i have followed the approach as suggested in this paper:
 Here is the brief discussion of the method proposed in the above paper.<br>
 The basic objective is to obtain a network which outputs similar feature vectors for faces of the same person.Based on this objective function the authors have proposed to train the Convolutional network with the help of training set that contains three face images at a time. However two of the three images is of the same person where as third image is of a different person. In order to trian the network to give samilar encoding for the first two images and a differnt one for the third image, they have proposed a triplet loss function. This loss function aims to minimize distance between first two images and maximize distance from the third image.
 
-### [](#header-2)VGG-16 Net 
+## [](#header-2)VGG-16 Net 
 The convnet architecture used here is VGG-16 as shown below:<br>
 <img src="https://raw.githubusercontent.com/anirudhk686/facial_recognition/master/images/vgg16.png" width="300" height="600">
 <br>
 [image source](http://book.paddlepaddle.org/03.image_classification/)
 
-### [](#header-2)Implementation
+## [](#header-2)Implementation
 * Keras library with TensorFlow backend has been used to implement the above network.however due device contraints i could to train the network. Hence i used the trained weights after some modifications. the weights were downloaded from [here](http://www.vlfeat.org/matconvnet/pretrained/#face-recognition).They had also used the same procedure as described above. 
 * But the downloaded weights were trained to identify 2622 pre-defined specific faces and hence i had to generalise it. For this i removed the last softmax layer and now the network would give out 2622 dimension feature vector for each face. since the network was trained using the triplet loss function it would output similar feature vector for faces of same person. 
 * Now all the faces to be recognized in future are placed in a folder labelled with the person's name.Then feature vectors for all those faces are obtained by passind them through the modified network. These feature vectors are stored in a dictionary along with their person names.
 * Later when need to recognised a face, its feature vector is generated and the compared with the known feature vectors.Name of the most similar vector is obtained. for this i have used cosine similarity from scipy library.
 
 >### Code
+
 * The entire project is implemented in python and avaliable [here](https://github.com/anirudhk686/facial_recognition).
-* 
+* the images to be recognitzed later must be places in known folder.
+* the code to generate vectors of known folder is present in vgg.py.
+* the code to compare unknown face with known is present in compare.py.
+* Image pre-processing and code to crop out the faces is implemented in both files hence any image containing one face can be passed.
 
+## [](#header-2)Usage
+Information on code usage and requirements is avaliable in project [readme](https://github.com/anirudhk686/facial_recognition/blob/master/README.md).
 
-
-
-
-
-
-
-
-###### [](#header-6)Header 6
-
-| head1        | head two          | three |
-|:-------------|:------------------|:------|
-| ok           | good swedish fish | nice  |
-| out of stock | good and plenty   | nice  |
-| ok           | good `oreos`      | hmm   |
-| ok           | good `zoute` drop | yumm  |
-
-### There's a horizontal rule below this.
-
-* * *
-
-### Here is an unordered list:
-
-*   Item foo
-*   Item bar
-*   Item baz
-*   Item zip
-
-### And an ordered list:
-
-1.  Item one
-1.  Item two
-1.  Item three
-1.  Item four
-
-### And a nested list:
-
-- level 1 item
-  - level 2 item
-  - level 2 item
-    - level 3 item
-    - level 3 item
-- level 1 item
-  - level 2 item
-  - level 2 item
-  - level 2 item
-- level 1 item
-  - level 2 item
-  - level 2 item
-- level 1 item
-
-### Small image
-
-![](https://assets-cdn.github.com/images/icons/emoji/octocat.png)
-
-### Large image
-
-![](https://guides.github.com/activities/hello-world/branching.png)
-
-
-### Definition lists can be used with HTML syntax.
-
-<dl>
-<dt>Name</dt>
-<dd>Godzilla</dd>
-<dt>Born</dt>
-<dd>1952</dd>
-<dt>Birthplace</dt>
-<dd>Japan</dd>
-<dt>Color</dt>
-<dd>Green</dd>
-</dl>
-
-```
-Long, single-line code blocks should not wrap. They should horizontally scroll if they are too long. This line should be long enough to demonstrate this.
-```
-
-```
-The final element.
-```
+#### [](#header-2)References
+Apart from the paper mentioned above i have used the following resources:
+* Facenet: A unified embedding for face recognition and clustering,F Schroff, D Kalenichenko, J Philbin - Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition,2015.[paper](https://arxiv.org/abs/1503.03832)
+* stanford course on convnets.[link](http://cs231n.stanford.edu/)
+* blog by Adam Geitgey.[link](https://medium.com/@ageitgey/machine-learning-is-fun-part-4-modern-face-recognition-with-deep-learning-c3cffc121d78)
+* blog by m.zaradzki.[link](https://aboveintelligent.com/face-recognition-with-keras-and-opencv-2baf2a83b799)
