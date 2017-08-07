@@ -27,11 +27,15 @@ For this i have followed the approach as suggested in this paper:
 Here is the brief discussion of the method proposed in the above paper.
 The basic objective is to obtain a network which outputs similar feature vectors for faces of the same person.Based on this objective function the authors have proposed to train the Convolutional network with the help of training set that contains three face images at a time. However two of the three images is of the same person where as third image is of a different person. In order to trian the network to give samilar encoding for the first two images and a differnt one for the third image, they have proposed a triplet loss function. This loss function aims to minimize distance between first two images and maximize distance from the third image.
 
-## [](#header-2)VGG-16 Net
+### [](#header-2)VGG-16 Net 
 The convnet architecture used here is VGG-16 as shown below:<br>
 <img src="https://raw.githubusercontent.com/anirudhk686/facial_recognition/master/images/vgg16.png" width="300" height="600">
 <br>
 [image source](http://book.paddlepaddle.org/03.image_classification/)
+
+### [](#header-2)Implementation
+Keras library with TensorFlow backend has been used to implement the above network.however due device contraints i could to train the network. Hence i used the trained weights after some modifications. the weight were downloaded from [here](http://www.vlfeat.org/matconvnet/pretrained/#face-recognition).They had also used the same procedure as described above. 
+But the downloaded weights were trained to identify 2622 pre-defined specific faces and hence i had to generalise it. For this i removed the last softmax layer and now the network would give out 2622 dimension feature vector for each face. since the network was trained using the triplet loss function it would output similar feature vector for faces of same person. 
 
 
 
