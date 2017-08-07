@@ -29,7 +29,7 @@ The basic objective is to obtain a network which outputs similar feature vectors
 
 ## [](#header-2)VGG-16 Net
 The convnet architecture used here is VGG-16 as shown below:
-<img src="https://raw.githubusercontent.com/anirudhk686/facial_recognition/master/images/vgg16.png" width="300" height="537"><br>
+<style>p.indent{ padding-left: 1.8em }</style><img src="https://raw.githubusercontent.com/anirudhk686/facial_recognition/master/images/vgg16.png" width="300" height="600"><br>
 [image source](http://book.paddlepaddle.org/03.image_classification/)
 
 
