@@ -3,7 +3,7 @@ layout: default
 ---
 # [](#header-2)About
 
-In this project, i have built a facial recognition system using a convolutional neural network. This project was a part of my internship at [NCAOR](http://www.ncaor.gov.in/), India.I have used the VGG-16 Net architecture and this has been implemented using keras library in python.
+In this project, i have built a facial recognition system using a convolutional neural network. This project was a part of my internship at [NCAOR](http://www.ncaor.gov.in/), India under the guidance of [Mr. Sakthivel Samy](http://www.ncaor.gov.in/profiles/details/14).I have used the VGG-16 Net architecture and this has been implemented using keras library in python.
 
 In this page, i have described the implementation details and references used.
 If you want to just know how to use this project and not the details, please refer to project's [readme](https://github.com/anirudhk686/facial_recognition/blob/master/README.md). 
