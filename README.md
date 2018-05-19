@@ -1,6 +1,6 @@
 # facial_recognition
 ## About
-In this project i have built a facial recognition system using convolutional neural network. This project was a part of my internship at NCAOR,India. I have used the VGG-16 Net architecture and this has been implemented using keras library in python.<br>
+In this project i have built a facial recognition system using convolutional neural network. I have used the VGG-16 Net architecture and this has been implemented using keras library in python.<br>
 Here I have described only about the usage and requirements. For implementation details ,please refer to the [project_blog](https://anirudhk686.github.io/facial_recognition/)
 ## Requirements:
 - python (version 3.5 or greater)
